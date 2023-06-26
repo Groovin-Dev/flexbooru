@@ -125,9 +125,6 @@ object Libs {
     val loopScrollAnimation = "com.github.onlymash:RecyclerViewLoopScrollAnimation:a262ee9710"
 
     val firebaseBom = "com.google.firebase:firebase-bom:31.4.0"
-    val firebaseAnalyticsKtx = "com.google.firebase:firebase-analytics-ktx"
-    val firebaseCrashlytics = "com.google.firebase:firebase-crashlytics"
-    val playServicesAds = "com.google.android.gms:play-services-ads:22.0.0"
     val playServicesVision = "com.google.android.gms:play-services-vision:20.1.3"
     val playServicesOssLicenses = "com.google.android.gms:play-services-oss-licenses:17.0.0"
     val billingKtx = "com.android.billingclient:billing-ktx:5.1.0"
