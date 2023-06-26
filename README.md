@@ -1,6 +1,11 @@
 # Notice
 
-This branch removes all ads and tracking from the main repo
+Here are the following changes to this fork:
+- Remove any analytics
+- Remove any purchase related code
+- Hardcode any purchase benifits
+
+If you would like to support the original author, please use the main fork: https://github.com/flexbooru/flexbooru/
 
 # Flexbooru
 A booru client for Android, support [Danbooru](https://github.com/r888888888/danbooru), [Moebooru](https://github.com/moebooru/moebooru), Gelbooru, Shimmie, etc.
