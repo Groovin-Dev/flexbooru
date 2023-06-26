@@ -42,8 +42,6 @@
 
 -keep class com.google.android.gms.** { *; }
 
--keep class com.android.vending.billing.**
-
 # Kotlin serialization
 
 # Keep `Companion` object fields of serializable classes.

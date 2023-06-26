@@ -127,7 +127,6 @@ object Libs {
     val firebaseBom = "com.google.firebase:firebase-bom:31.4.0"
     val playServicesVision = "com.google.android.gms:play-services-vision:20.1.3"
     val playServicesOssLicenses = "com.google.android.gms:play-services-oss-licenses:17.0.0"
-    val billingKtx = "com.android.billingclient:billing-ktx:5.1.0"
 
     private const val exoplayerVersion = "2.18.5"
     val exoplayerCore = "com.google.android.exoplayer:exoplayer-core:$exoplayerVersion"

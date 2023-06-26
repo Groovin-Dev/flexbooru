@@ -199,7 +199,6 @@ dependencies {
 
     implementation(Libs.playServicesVision)
     implementation(Libs.playServicesOssLicenses)
-    implementation(Libs.billingKtx)
 
     implementation(Libs.retrofit)
     implementation(Libs.retrofitKotlinxSerializationConverter)
