@@ -1,3 +1,7 @@
+# Notice
+
+This branch removes all ads and tracking from the main repo
+
 # Flexbooru
 A booru client for Android, support [Danbooru](https://github.com/r888888888/danbooru), [Moebooru](https://github.com/moebooru/moebooru), Gelbooru, Shimmie, etc.
 
