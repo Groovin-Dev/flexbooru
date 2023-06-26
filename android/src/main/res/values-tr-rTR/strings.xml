@@ -272,16 +272,6 @@
     <string name="comment_send">Gönder</string>
     <string name="comment_cancel">İptal et</string>
     <string name="comment_hint">Yorum girdisi</string>
-    <string name="purchase_title">Reklamları kaldırın ve özelliklerin kilidini açın</string>
-    <string name="purchase_history_title">Satın alımı geri yükle</string>
-    <string name="purchase_info_title">Reklamları kaldırın ve tüm özelliklerin kilidini açın</string>
-    <string name="purchase_info_remove_ads">* Reklamları kaldır</string>
-    <string name="purchase_info_unlock_full_features">* Tüm özelliklerin kilidini aç</string>
-    <string name="purchase_info_features">1. Mevcut booru sınırını kaldırın.\n2. Moebooru\'nun havuzunun zip arşivini indirin. \n3. Booru\'ları dosyadan yedekleyin veya geri yükleyin.\n4. SauceNao ile tersine arama yapın.
-    </string>
-    <string name="purchase_pay_title">Ödemeyi yap/geri yükle</string>
-    <string name="purchase_pay_google_play">Google Play</string>
-    <string name="purchase_pay_alipay">Alipay</string>
     <string name="tab_start_date">Başlangıç tarihi</string>
     <string name="tab_end_date">Bitiş tarihi</string>
     <string name="sauce_nao_help">Yardım</string>

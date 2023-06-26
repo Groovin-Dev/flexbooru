@@ -272,17 +272,6 @@
     <string name="comment_send">Enviar</string>
     <string name="comment_cancel">Cancelar</string>
     <string name="comment_hint">Inserir comentário</string>
-    <string name="purchase_title">Remover propagandas &amp; Liberar funcionalidades</string>
-    <string name="purchase_history_title">Restore purchase</string>
-    <string name="purchase_info_title">Remover anúncios e desbloquear todas as funcionalidades</string>
-    <string name="purchase_info_remove_ads">* Remover anúncios</string>
-    <string name="purchase_info_unlock_full_features">Desbloquear todas as funcionalidades</string>
-    <string name="purchase_info_features">1. Remova o limite do buru disponível.\n2. Baixe o arquivo zip do pool de
-        moebooru.\n. Backup de &amp; Restaure o boorus do arquivo.\n. Reverte a pesquisa por SauceNao.
-    </string>
-    <string name="purchase_pay_title">Restaurar compras</string>
-    <string name="purchase_pay_google_play">Google Play</string>
-    <string name="purchase_pay_alipay">Alipay</string>
     <string name="tab_start_date">Data de início</string>
     <string name="tab_end_date">Data de término</string>
     <string name="sauce_nao_help">Ajuda</string>

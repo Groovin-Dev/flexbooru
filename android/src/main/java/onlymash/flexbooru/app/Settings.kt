@@ -236,11 +236,6 @@ object Settings {
         set(value) = sp.edit().putBoolean(
             IS_AVAILABLE_STORE, value).apply()
 
-    var isGoogleSign: Boolean
-        get() = sp.getBoolean(GOOGLE_SIGN_KEY, false)
-        set(value) = sp.edit().putBoolean(
-            GOOGLE_SIGN_KEY, value).apply()
-
     var sauceNaoApiKey: String
         get() = sp.getString(SAUCE_NAO_API_KEY_KEY, "") ?: ""
         set(value) = sp.edit().putString(

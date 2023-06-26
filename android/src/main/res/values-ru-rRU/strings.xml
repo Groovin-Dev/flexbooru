@@ -273,16 +273,6 @@
     <string name="comment_send">Отправить</string>
     <string name="comment_cancel">Отмена</string>
     <string name="comment_hint">Введите комментарий</string>
-    <string name="purchase_title">Удалить рекламу &amp; разблокировать новые возможности</string>
-    <string name="purchase_history_title">Restore purchase</string>
-    <string name="purchase_info_title">Удалить рекламу и разблокировать все возможности</string>
-    <string name="purchase_info_remove_ads">* Удалить рекламу</string>
-    <string name="purchase_info_unlock_full_features">* Разблокировать все возможности</string>
-    <string name="purchase_info_features">1. Нет лимита доступных booru-галерей.\n2. Скачивание zip-архива пула с        moebooru.\n3. Резервное копирование и восстановление booru-галерей из файла.\n4. Поиск изображения по SauceNao.
-        </string>
-    <string name="purchase_pay_title">Оплатить / Восстановить покупку</string>
-    <string name="purchase_pay_google_play">Google Play</string>
-    <string name="purchase_pay_alipay">Alipay</string>
     <string name="tab_start_date">Дата старта</string>
     <string name="tab_end_date">Дата окончания</string>
     <string name="sauce_nao_help">Справка</string>

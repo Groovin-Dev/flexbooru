@@ -61,7 +61,6 @@ import onlymash.flexbooru.app.Settings.ORDER_SUCCESS_KEY
 import onlymash.flexbooru.app.Settings.activatedBooruUid
 import onlymash.flexbooru.app.Settings.autoHideBottomBar
 import onlymash.flexbooru.app.Settings.isAvailableOnStore
-import onlymash.flexbooru.app.Settings.isGoogleSign
 import onlymash.flexbooru.app.Settings.latestVersionCode
 import onlymash.flexbooru.app.Settings.latestVersionName
 import onlymash.flexbooru.app.Settings.latestVersionUrl
@@ -103,8 +102,6 @@ class MainActivity : PathActivity(), SharedPreferences.OnSharedPreferenceChangeL
         private const val DRAWER_ITEM_ID_WHAT_ANIME = 7L
         private const val DRAWER_ITEM_ID_SETTINGS = 8L
         private const val DRAWER_ITEM_ID_ABOUT = 9L
-        private const val DRAWER_ITEM_ID_PURCHASE_HISTORY = 10L
-        private const val DRAWER_ITEM_ID_PURCHASE = 11L
     }
 
     private val binding by viewBinding(ActivityMainBinding::inflate)
@@ -362,17 +359,6 @@ class MainActivity : PathActivity(), SharedPreferences.OnSharedPreferenceChangeL
             onDrawerItemClickListener = drawerItemClickListener
             tintNavigationBar = false
         }
-        if (isGoogleSign) {
-            drawerSliderView.addItems(
-                PrimaryDrawerItem().apply {
-                    name = StringHolder(R.string.purchase_history_title)
-                    icon = createImageHolder(R.drawable.ic_payment_24dp)
-                    isSelectable = false
-                    isIconTinted = true
-                    identifier = DRAWER_ITEM_ID_PURCHASE_HISTORY
-                }
-            )
-        }
     }
 
     private fun createImageHolder(@DrawableRes resId: Int): ImageHolder =
@@ -401,11 +387,7 @@ class MainActivity : PathActivity(), SharedPreferences.OnSharedPreferenceChangeL
             .setTitle(R.string.update_found_update)
             .setMessage(getString(R.string.update_version, latestVersionName))
             .setPositiveButton(R.string.dialog_update) { _, _ ->
-                if (isGoogleSign && isAvailableOnStore) {
-                    openAppInMarket(applicationContext.packageName)
-                } else {
-                    launchUrl(latestVersionUrl)
-                }
+                launchUrl(latestVersionUrl)
                 finish()
             }
             .setNegativeButton(R.string.dialog_exit) { _, _ ->
