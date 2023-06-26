@@ -25,8 +25,6 @@ plugins {
     kotlin("plugin.serialization")
     id("com.google.devtools.ksp") version "1.8.10-1.0.9"
     id("androidx.navigation.safeargs.kotlin")
-    id("com.google.gms.google-services")
-    id("com.google.firebase.crashlytics")
     id("com.google.android.gms.oss-licenses-plugin")
 }
 
@@ -198,10 +196,7 @@ dependencies {
     implementation(Libs.barCodeScanner)
 
     implementation(platform(Libs.firebaseBom))
-    implementation(Libs.firebaseAnalyticsKtx)
-    implementation(Libs.firebaseCrashlytics)
 
-    implementation(Libs.playServicesAds)
     implementation(Libs.playServicesVision)
     implementation(Libs.playServicesOssLicenses)
     implementation(Libs.billingKtx)

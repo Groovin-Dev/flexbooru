@@ -29,8 +29,6 @@ import coil.dispose
 import coil.load
 import coil.size.Scale
 import com.android.billingclient.api.*
-import com.google.android.gms.ads.MobileAds
-import com.google.android.gms.ads.RequestConfiguration
 import com.google.android.material.color.DynamicColors
 import com.mikepenz.materialdrawer.util.AbstractDrawerImageLoader
 import com.mikepenz.materialdrawer.util.DrawerImageLoader
@@ -90,11 +88,6 @@ class App : Application(), DIAware, ImageLoaderFactory {
         }
         AppCompatDelegate.setDefaultNightMode(nightMode)
         DrawerImageLoader.init(drawerImageLoader)
-        if (!isOrderSuccess) {
-            MobileAds.initialize(this) {}
-            MobileAds.setRequestConfiguration(RequestConfiguration.Builder()
-                .setTestDeviceIds(listOf("65DC68D21E774E5B6CAF511768A3E2D2")).build())
-        }
         if (BuildConfig.DEBUG) {
             return
         }
