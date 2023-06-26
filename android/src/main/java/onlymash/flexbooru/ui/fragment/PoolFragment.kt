@@ -32,7 +32,6 @@ import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import okhttp3.HttpUrl
 import onlymash.flexbooru.R
-import onlymash.flexbooru.app.Settings.isOrderSuccess
 import onlymash.flexbooru.app.Settings.pageLimit
 import onlymash.flexbooru.app.Values.BOORU_TYPE_DAN1
 import onlymash.flexbooru.app.Values.BOORU_TYPE_MOE
@@ -42,7 +41,6 @@ import onlymash.flexbooru.data.repository.pool.PoolRepositoryImpl
 import onlymash.flexbooru.extension.asMergedLoadStates
 import onlymash.flexbooru.extension.launchUrl
 import onlymash.flexbooru.ui.activity.AccountConfigActivity
-import onlymash.flexbooru.ui.activity.PurchaseActivity
 import onlymash.flexbooru.ui.adapter.PoolAdapter
 import onlymash.flexbooru.ui.adapter.StateAdapter
 import onlymash.flexbooru.ui.base.PathActivity
@@ -155,10 +153,6 @@ class PoolFragment : SearchBarFragment() {
         AlertDialog.Builder(activity)
             .setTitle("Pool $poolId")
             .setItems(activity.resources.getStringArray(R.array.pool_item_action)) { _, which ->
-                if (!isOrderSuccess) {
-                    startActivity(Intent(activity, PurchaseActivity::class.java))
-                    return@setItems
-                }
                 if (booru.user == null) {
                     startActivity(Intent(activity, AccountConfigActivity::class.java))
                     return@setItems

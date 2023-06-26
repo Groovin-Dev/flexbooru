@@ -17,8 +17,8 @@ package onlymash.flexbooru.data.model.sankaku
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import onlymash.flexbooru.data.model.common.Post
 import onlymash.flexbooru.data.model.common.Date
+import onlymash.flexbooru.data.model.common.Post
 import onlymash.flexbooru.data.model.common.TagBase
 import onlymash.flexbooru.data.model.common.User
 import onlymash.flexbooru.data.utils.toSafeUrl

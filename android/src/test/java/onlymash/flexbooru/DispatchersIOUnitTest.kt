@@ -17,10 +17,9 @@ package onlymash.flexbooru
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asExecutor
-import org.junit.Test
-
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Before
+import org.junit.Test
 import java.util.concurrent.Executor
 
 class DispatchersIOUnitTest {

@@ -17,9 +17,6 @@ package onlymash.flexbooru.okhttp
 
 import android.content.Context
 import android.net.Uri
-import java.io.File
-import java.io.IOException
-
 import android.os.StatFs
 import androidx.annotation.VisibleForTesting
 import okhttp3.*
@@ -28,6 +25,8 @@ import onlymash.flexbooru.app.Keys.HEADER_REFERER
 import onlymash.flexbooru.app.Keys.HEADER_USER_AGENT
 import onlymash.flexbooru.app.Settings
 import onlymash.flexbooru.app.Values
+import java.io.File
+import java.io.IOException
 import kotlin.math.max
 import kotlin.math.min
 

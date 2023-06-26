@@ -27,11 +27,11 @@ import androidx.preference.SwitchPreferenceCompat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import onlymash.flexbooru.R
+import onlymash.flexbooru.app.Settings.BYPASS_WAF_KEY
 import onlymash.flexbooru.app.Settings.CLEAR_CACHE_KEY
+import onlymash.flexbooru.app.Settings.DISABLE_SNI_KEY
 import onlymash.flexbooru.app.Settings.DNS_OVER_HTTPS
 import onlymash.flexbooru.app.Settings.DNS_OVER_HTTPS_PROVIDER
-import onlymash.flexbooru.app.Settings.DISABLE_SNI_KEY
-import onlymash.flexbooru.app.Settings.BYPASS_WAF_KEY
 import onlymash.flexbooru.app.Settings.DOWNLOAD_PATH_KEY
 import onlymash.flexbooru.app.Settings.GRID_MODE_KEY
 import onlymash.flexbooru.app.Settings.GRID_RATIO_KEY

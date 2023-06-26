@@ -15,7 +15,7 @@
 
 package onlymash.flexbooru.common.saucenao.api
 
-import io.ktor.client.HttpClient
+import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.request.*
 import io.ktor.client.request.forms.*

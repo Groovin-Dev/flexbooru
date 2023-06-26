@@ -15,7 +15,10 @@
 
 package onlymash.flexbooru.extension
 
-import java.io.*
+import java.io.Closeable
+import java.io.IOException
+import java.io.InputStream
+import java.io.OutputStream
 
 fun Closeable.safeCloseQuietly() {
     try {

@@ -31,12 +31,12 @@ import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import onlymash.flexbooru.R
 import onlymash.flexbooru.app.Settings.pageLimit
-import onlymash.flexbooru.app.Values.Tags
 import onlymash.flexbooru.app.Values.BOORU_TYPE_DAN
 import onlymash.flexbooru.app.Values.BOORU_TYPE_DAN1
 import onlymash.flexbooru.app.Values.BOORU_TYPE_GEL
 import onlymash.flexbooru.app.Values.BOORU_TYPE_GEL_LEGACY
 import onlymash.flexbooru.app.Values.BOORU_TYPE_MOE
+import onlymash.flexbooru.app.Values.Tags
 import onlymash.flexbooru.data.action.ActionTag
 import onlymash.flexbooru.data.model.common.Booru
 import onlymash.flexbooru.data.repository.tag.TagRepositoryImpl

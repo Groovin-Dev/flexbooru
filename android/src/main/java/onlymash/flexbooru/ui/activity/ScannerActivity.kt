@@ -32,11 +32,11 @@ import com.google.android.gms.samples.vision.barcodereader.BarcodeCapture
 import com.google.android.gms.samples.vision.barcodereader.BarcodeGraphic
 import com.google.android.gms.vision.barcode.Barcode
 import com.google.android.gms.vision.barcode.BarcodeDetector
-import xyz.belvi.mobilevisionbarcodescanner.BarcodeRetriever
 import onlymash.flexbooru.R
 import onlymash.flexbooru.data.database.BooruManager
 import onlymash.flexbooru.data.model.common.Booru
 import onlymash.flexbooru.ui.base.BaseActivity
+import xyz.belvi.mobilevisionbarcodescanner.BarcodeRetriever
 
 //https://github.com/shadowsocks/shadowsocks-android/blob/master/mobile/src/main/java/com/github/shadowsocks/ScannerActivity.kt
 class ScannerActivity : BaseActivity(), BarcodeRetriever {

@@ -43,12 +43,12 @@ import com.google.android.material.behavior.HideBottomViewOnScrollBehavior
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.mikepenz.materialdrawer.holder.ImageHolder
 import com.mikepenz.materialdrawer.holder.StringHolder
-import com.mikepenz.materialdrawer.model.*
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem
+import com.mikepenz.materialdrawer.model.ProfileDrawerItem
+import com.mikepenz.materialdrawer.model.ProfileSettingDrawerItem
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
 import com.mikepenz.materialdrawer.model.interfaces.IProfile
 import com.mikepenz.materialdrawer.util.addItems
-import com.mikepenz.materialdrawer.util.getDrawerItem
-import com.mikepenz.materialdrawer.util.removeItems
 import com.mikepenz.materialdrawer.widget.AccountHeaderView
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -62,30 +62,31 @@ import onlymash.flexbooru.app.Settings.activatedBooruUid
 import onlymash.flexbooru.app.Settings.autoHideBottomBar
 import onlymash.flexbooru.app.Settings.isAvailableOnStore
 import onlymash.flexbooru.app.Settings.isGoogleSign
-import onlymash.flexbooru.app.Settings.isOrderSuccess
 import onlymash.flexbooru.app.Settings.latestVersionCode
 import onlymash.flexbooru.app.Settings.latestVersionName
 import onlymash.flexbooru.app.Settings.latestVersionUrl
 import onlymash.flexbooru.app.Values.BOORU_TYPE_DAN
 import onlymash.flexbooru.app.Values.BOORU_TYPE_DAN1
-import onlymash.flexbooru.data.api.AppUpdaterApi
 import onlymash.flexbooru.app.Values.BOORU_TYPE_GEL
 import onlymash.flexbooru.app.Values.BOORU_TYPE_GEL_LEGACY
 import onlymash.flexbooru.app.Values.BOORU_TYPE_MOE
 import onlymash.flexbooru.app.Values.BOORU_TYPE_SANKAKU
 import onlymash.flexbooru.app.Values.BOORU_TYPE_SHIMMIE
 import onlymash.flexbooru.app.Values.BOORU_TYPE_UNKNOWN
+import onlymash.flexbooru.data.api.AppUpdaterApi
 import onlymash.flexbooru.data.database.dao.BooruDao
 import onlymash.flexbooru.data.model.common.Booru
 import onlymash.flexbooru.databinding.ActivityMainBinding
-import onlymash.flexbooru.extension.*
-import onlymash.flexbooru.ui.base.SearchBarFragment
-import onlymash.flexbooru.ui.viewmodel.BooruViewModel
-import onlymash.flexbooru.ui.viewmodel.getBooruViewModel
+import onlymash.flexbooru.extension.findNavController
+import onlymash.flexbooru.extension.launchUrl
+import onlymash.flexbooru.extension.openAppInMarket
 import onlymash.flexbooru.extension.setupInsets
 import onlymash.flexbooru.ui.base.PathActivity
+import onlymash.flexbooru.ui.base.SearchBarFragment
 import onlymash.flexbooru.ui.helper.isNightEnable
 import onlymash.flexbooru.ui.viewbinding.viewBinding
+import onlymash.flexbooru.ui.viewmodel.BooruViewModel
+import onlymash.flexbooru.ui.viewmodel.getBooruViewModel
 import org.kodein.di.instance
 
 class MainActivity : PathActivity(), SharedPreferences.OnSharedPreferenceChangeListener {
@@ -180,8 +181,6 @@ class MainActivity : PathActivity(), SharedPreferences.OnSharedPreferenceChangeL
             DRAWER_ITEM_ID_SAUCE_NAO -> toActivity(SauceNaoActivity::class.java)
             DRAWER_ITEM_ID_WHAT_ANIME -> toActivity(WhatAnimeActivity::class.java)
             DRAWER_ITEM_ID_ABOUT -> toActivity(AboutActivity::class.java)
-            DRAWER_ITEM_ID_PURCHASE -> toActivity(PurchaseActivity::class.java)
-            DRAWER_ITEM_ID_PURCHASE_HISTORY -> toActivity(PurchaseHistoryActivity::class.java)
         }
         false
     }
@@ -235,25 +234,6 @@ class MainActivity : PathActivity(), SharedPreferences.OnSharedPreferenceChangeL
         }
         checkUpdate()
         checkNotificationPermission()
-    }
-
-    private fun initPurchaseItem() {
-        val item = drawerSliderView.getDrawerItem(DRAWER_ITEM_ID_PURCHASE)
-        if (isOrderSuccess) {
-            if (item != null) {
-                drawerSliderView.removeItems(DRAWER_ITEM_ID_PURCHASE)
-            }
-        } else if (item == null) {
-            drawerSliderView.addItems(
-                PrimaryDrawerItem().apply {
-                    name = StringHolder(R.string.purchase_title)
-                    icon = createImageHolder(R.drawable.ic_payment_24dp)
-                    isSelectable = false
-                    isIconTinted = true
-                    identifier = DRAWER_ITEM_ID_PURCHASE
-                }
-            )
-        }
     }
 
     private fun setupNavigationMenu(booruType: Int) {
@@ -393,7 +373,6 @@ class MainActivity : PathActivity(), SharedPreferences.OnSharedPreferenceChangeL
                 }
             )
         }
-        initPurchaseItem()
     }
 
     private fun createImageHolder(@DrawableRes resId: Int): ImageHolder =
@@ -440,15 +419,11 @@ class MainActivity : PathActivity(), SharedPreferences.OnSharedPreferenceChangeL
     }
 
     private fun initDrawerHeader() {
-        val success = isOrderSuccess
         val size = boorus.size
         var uid = activatedBooruUid
         var i = -1
         headerView.clear()
         boorus.forEachIndexed { index, booru ->
-            if (!success && index >= BOORUS_LIMIT) {
-                return@forEachIndexed
-            }
             if (i == -1 && booru.uid == uid) {
                 i = index
             }
@@ -470,7 +445,7 @@ class MainActivity : PathActivity(), SharedPreferences.OnSharedPreferenceChangeL
         }
         headerView.addProfile(
             profileSettingDrawerItem,
-            if (success || size < BOORUS_LIMIT) size else BOORUS_LIMIT
+            size
         )
         if (size == 0) {
             activatedBooruUid = -1
@@ -504,7 +479,6 @@ class MainActivity : PathActivity(), SharedPreferences.OnSharedPreferenceChangeL
                 booruViewModel.loadBooru(uid)
             }
             ORDER_SUCCESS_KEY -> {
-                initPurchaseItem()
                 if (boorus.size > BOORUS_LIMIT) {
                     initDrawerHeader()
                 }

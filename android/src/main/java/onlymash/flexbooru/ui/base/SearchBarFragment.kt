@@ -20,7 +20,10 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
 import android.view.animation.DecelerateInterpolator
-import android.widget.*
+import android.widget.ImageButton
+import android.widget.LinearLayout
+import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.annotation.FloatRange
 import androidx.appcompat.graphics.drawable.DrawerArrowDrawable
@@ -48,7 +51,8 @@ import onlymash.flexbooru.data.repository.suggestion.SuggestionRepositoryImpl
 import onlymash.flexbooru.databinding.FragmentSearchbarBinding
 import onlymash.flexbooru.ui.activity.MainActivity
 import onlymash.flexbooru.ui.activity.SearchActivity
-import onlymash.flexbooru.ui.viewmodel.*
+import onlymash.flexbooru.ui.viewmodel.SuggestionViewModel
+import onlymash.flexbooru.ui.viewmodel.getSuggestionViewModel
 import onlymash.flexbooru.widget.searchbar.SearchBar
 import onlymash.flexbooru.widget.searchbar.SearchBarMover
 import org.kodein.di.instance

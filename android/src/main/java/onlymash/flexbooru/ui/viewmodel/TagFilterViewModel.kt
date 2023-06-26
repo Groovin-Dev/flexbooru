@@ -18,7 +18,9 @@ package onlymash.flexbooru.ui.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import onlymash.flexbooru.data.model.common.TagFilter
 import onlymash.flexbooru.data.repository.tagfilter.TagFilterRepository
 

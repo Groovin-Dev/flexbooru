@@ -20,8 +20,8 @@ import androidx.room.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asExecutor
 import onlymash.flexbooru.app.Values.DB_FILE_NAME
-import onlymash.flexbooru.data.model.common.*
 import onlymash.flexbooru.data.database.dao.*
+import onlymash.flexbooru.data.model.common.*
 
 @Database(
     entities = [

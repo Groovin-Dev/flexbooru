@@ -23,7 +23,6 @@ import onlymash.flexbooru.R
 import onlymash.flexbooru.okhttp.DohProviders
 import onlymash.flexbooru.okhttp.NoSniFactory
 import org.kodein.di.instance
-import java.util.*
 
 object Settings {
 
@@ -236,39 +235,6 @@ object Settings {
         get() = sp.getBoolean(IS_AVAILABLE_STORE, false)
         set(value) = sp.edit().putBoolean(
             IS_AVAILABLE_STORE, value).apply()
-
-    var orderId: String
-        get() = sp.getString(ORDER_ID_KEY, "") ?: ""
-        set(value) = sp.edit().putString(
-            ORDER_ID_KEY, value).apply()
-
-    var orderTime: Long
-        get() = sp.getLong(ORDER_TIME_KEY, -1L)
-        set(value) = sp.edit().putLong(
-            ORDER_TIME_KEY, value).apply()
-
-    var orderToken: String
-        get() = sp.getString(ORDER_TOKEN_KEY, "") ?: ""
-        set(value) = sp.edit().putString(
-            ORDER_TOKEN_KEY, value).apply()
-
-    var isOrderSuccess: Boolean
-        get() = sp.getBoolean(ORDER_SUCCESS_KEY, false)
-        set(value) = sp.edit().putBoolean(
-            ORDER_SUCCESS_KEY, value).apply()
-
-    var orderDeviceId: String
-        get() {
-            var id = sp.getString(
-                ORDER_DEVICE_ID_KEY, "") ?: ""
-            if (id.isEmpty()) {
-                id = UUID.randomUUID().toString()
-                orderDeviceId = id
-            }
-            return id
-        }
-        set(value) = sp.edit().putString(
-            ORDER_DEVICE_ID_KEY, value).apply()
 
     var isGoogleSign: Boolean
         get() = sp.getBoolean(GOOGLE_SIGN_KEY, false)

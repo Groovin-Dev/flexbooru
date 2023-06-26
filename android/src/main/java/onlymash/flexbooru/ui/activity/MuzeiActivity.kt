@@ -43,14 +43,14 @@ import onlymash.flexbooru.data.repository.suggestion.SuggestionRepositoryImpl
 import onlymash.flexbooru.databinding.ActivityMuzeiBinding
 import onlymash.flexbooru.extension.openAppInMarket
 import onlymash.flexbooru.ui.adapter.MuzeiAdapter
+import onlymash.flexbooru.ui.base.KodeinActivity
 import onlymash.flexbooru.ui.helper.ItemTouchCallback
 import onlymash.flexbooru.ui.helper.ItemTouchHelperCallback
+import onlymash.flexbooru.ui.viewbinding.viewBinding
 import onlymash.flexbooru.ui.viewmodel.MuzeiViewModel
 import onlymash.flexbooru.ui.viewmodel.SuggestionViewModel
 import onlymash.flexbooru.ui.viewmodel.getMuzeiViewModel
 import onlymash.flexbooru.ui.viewmodel.getSuggestionViewModel
-import onlymash.flexbooru.ui.base.KodeinActivity
-import onlymash.flexbooru.ui.viewbinding.viewBinding
 import onlymash.flexbooru.worker.MuzeiArtWorker
 import org.kodein.di.instance
 

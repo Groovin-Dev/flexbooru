@@ -31,10 +31,10 @@ import onlymash.flexbooru.data.database.dao.BooruDao
 import onlymash.flexbooru.data.model.common.Booru
 import onlymash.flexbooru.databinding.ActivityTagBlacklistBinding
 import onlymash.flexbooru.ui.adapter.TagBlacklistAdapter
-import onlymash.flexbooru.ui.viewmodel.BooruViewModel
-import onlymash.flexbooru.ui.viewmodel.getBooruViewModel
 import onlymash.flexbooru.ui.base.KodeinActivity
 import onlymash.flexbooru.ui.viewbinding.viewBinding
+import onlymash.flexbooru.ui.viewmodel.BooruViewModel
+import onlymash.flexbooru.ui.viewmodel.getBooruViewModel
 import org.kodein.di.instance
 
 class TagBlacklistActivity : KodeinActivity() {

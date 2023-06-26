@@ -31,18 +31,18 @@ import androidx.work.*
 import coil.executeBlocking
 import coil.imageLoader
 import coil.request.ImageRequest
+import onlymash.flexbooru.R
 import onlymash.flexbooru.app.App
 import onlymash.flexbooru.app.Settings
-import onlymash.flexbooru.okhttp.ProgressInterceptor
-import java.io.FileInputStream
-import java.io.IOException
-import onlymash.flexbooru.R
 import onlymash.flexbooru.data.model.common.Booru
 import onlymash.flexbooru.data.model.common.Post
 import onlymash.flexbooru.extension.*
-import onlymash.flexbooru.receiver.DownloadNotificationClickReceiver
 import onlymash.flexbooru.okhttp.OkHttp3Downloader
+import onlymash.flexbooru.okhttp.ProgressInterceptor
+import onlymash.flexbooru.receiver.DownloadNotificationClickReceiver
 import onlymash.flexbooru.ui.base.PathActivity
+import java.io.FileInputStream
+import java.io.IOException
 import java.io.InputStream
 
 class DownloadWorker(

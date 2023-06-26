@@ -24,7 +24,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.lifecycleScope
 import coil.load
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.coroutines.*
+import kotlinx.coroutines.launch
 import onlymash.flexbooru.R
 import onlymash.flexbooru.app.Settings.activatedBooruUid
 import onlymash.flexbooru.app.Values.BOORU_TYPE_DAN
@@ -37,10 +37,10 @@ import onlymash.flexbooru.data.api.BooruApis
 import onlymash.flexbooru.data.database.BooruManager
 import onlymash.flexbooru.data.model.common.Booru
 import onlymash.flexbooru.data.model.common.User
-import onlymash.flexbooru.extension.NetResult
-import onlymash.flexbooru.extension.launchUrl
 import onlymash.flexbooru.data.repository.user.UserRepositoryImpl
 import onlymash.flexbooru.databinding.ActivityAccountBinding
+import onlymash.flexbooru.extension.NetResult
+import onlymash.flexbooru.extension.launchUrl
 import onlymash.flexbooru.ui.base.PathActivity
 import onlymash.flexbooru.ui.viewbinding.viewBinding
 import org.kodein.di.instance

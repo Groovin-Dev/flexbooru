@@ -16,11 +16,11 @@
 package onlymash.flexbooru.data.utils
 
 import onlymash.flexbooru.app.Values.DATE_PATTERN_SHIMMIE
-import onlymash.flexbooru.app.Values.DATE_PATTERN_DAN as PATTERN_DAN
-import onlymash.flexbooru.app.Values.DATE_PATTERN_GEL as PATTERN_GEL
 import onlymash.flexbooru.extension.formatDate
 import java.text.SimpleDateFormat
 import java.util.*
+import onlymash.flexbooru.app.Values.DATE_PATTERN_DAN as PATTERN_DAN
+import onlymash.flexbooru.app.Values.DATE_PATTERN_GEL as PATTERN_GEL
 
 fun String.toSafeUrl(scheme: String, host: String): String {
     var url = this

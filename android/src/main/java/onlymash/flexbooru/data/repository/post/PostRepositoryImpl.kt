@@ -15,10 +15,12 @@
 
 package onlymash.flexbooru.data.repository.post
 
-import androidx.paging.*
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
 import kotlinx.coroutines.flow.Flow
-import onlymash.flexbooru.data.api.BooruApis
 import onlymash.flexbooru.data.action.ActionPost
+import onlymash.flexbooru.data.api.BooruApis
 import onlymash.flexbooru.data.database.MyDatabase
 import onlymash.flexbooru.data.model.common.Post
 

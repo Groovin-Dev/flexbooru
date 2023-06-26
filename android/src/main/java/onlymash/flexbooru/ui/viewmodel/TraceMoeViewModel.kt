@@ -22,9 +22,9 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
-import onlymash.flexbooru.extension.NetResult
 import onlymash.flexbooru.common.tracemoe.api.TraceMoeApi
 import onlymash.flexbooru.common.tracemoe.model.TraceResponse
+import onlymash.flexbooru.extension.NetResult
 
 class TraceMoeViewModel(private val traceMoeApi: TraceMoeApi) : ScopeViewModel() {
 

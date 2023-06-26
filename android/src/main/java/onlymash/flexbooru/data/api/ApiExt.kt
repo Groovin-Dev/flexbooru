@@ -73,7 +73,6 @@ inline fun <reified T> createApi(): T {
     val classJava = T::class
     val baseUrl = when (classJava) {
         AppUpdaterApi::class -> "https://raw.githubusercontent.com"
-        OrderApi::class -> "https://flexbooru-pay.fiepi.com"
         else -> Values.BASE_URL
     }
     val converterFactory = when (classJava) {

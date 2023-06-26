@@ -16,7 +16,9 @@
 package onlymash.flexbooru.data.repository.tag
 
 
-import androidx.paging.*
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
 import kotlinx.coroutines.flow.Flow
 import onlymash.flexbooru.app.Values
 import onlymash.flexbooru.data.action.ActionTag

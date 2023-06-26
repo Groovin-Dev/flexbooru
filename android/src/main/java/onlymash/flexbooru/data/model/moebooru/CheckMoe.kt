@@ -1,9 +1,8 @@
 package onlymash.flexbooru.data.model.moebooru
-import kotlinx.serialization.Serializable
 
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 import onlymash.flexbooru.data.model.common.User
-import org.kodein.type.typeToken
 
 
 @Serializable

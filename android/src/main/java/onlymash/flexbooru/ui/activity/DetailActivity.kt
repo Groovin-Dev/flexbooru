@@ -22,7 +22,9 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.DocumentsContract
-import android.view.*
+import android.view.MenuItem
+import android.view.View
+import android.view.Window
 import android.widget.Toast
 import androidx.annotation.IntRange
 import androidx.appcompat.app.AlertDialog
@@ -39,7 +41,6 @@ import coil.executeBlocking
 import coil.imageLoader
 import coil.request.ImageRequest
 import com.google.android.exoplayer2.ui.StyledPlayerView
-
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.sync.Mutex

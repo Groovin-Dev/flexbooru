@@ -17,8 +17,8 @@ package onlymash.flexbooru.data.repository.favorite
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import onlymash.flexbooru.app.App
 import onlymash.flexbooru.R
+import onlymash.flexbooru.app.App
 import onlymash.flexbooru.app.Values.BOORU_TYPE_DAN
 import onlymash.flexbooru.app.Values.BOORU_TYPE_DAN1
 import onlymash.flexbooru.app.Values.BOORU_TYPE_GEL

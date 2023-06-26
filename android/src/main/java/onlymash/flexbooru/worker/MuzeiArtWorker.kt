@@ -21,13 +21,11 @@ import androidx.core.net.toUri
 import androidx.work.*
 import com.google.android.apps.muzei.api.provider.Artwork
 import com.google.android.apps.muzei.api.provider.ProviderContract
-import onlymash.flexbooru.app.App
-import onlymash.flexbooru.app.Settings.activeMuzeiUid
-import onlymash.flexbooru.data.database.MuzeiManager
-import onlymash.flexbooru.data.database.dao.PostDao
 import onlymash.flexbooru.R
+import onlymash.flexbooru.app.App
 import onlymash.flexbooru.app.Settings.POST_SIZE_LARGER
 import onlymash.flexbooru.app.Settings.POST_SIZE_SAMPLE
+import onlymash.flexbooru.app.Settings.activeMuzeiUid
 import onlymash.flexbooru.app.Settings.muzeiLimit
 import onlymash.flexbooru.app.Settings.muzeiSize
 import onlymash.flexbooru.app.Values.BOORU_TYPE_DAN
@@ -35,6 +33,8 @@ import onlymash.flexbooru.app.Values.BOORU_TYPE_GEL
 import onlymash.flexbooru.app.Values.BOORU_TYPE_GEL_LEGACY
 import onlymash.flexbooru.app.Values.BOORU_TYPE_SHIMMIE
 import onlymash.flexbooru.data.database.BooruManager
+import onlymash.flexbooru.data.database.MuzeiManager
+import onlymash.flexbooru.data.database.dao.PostDao
 import onlymash.flexbooru.data.model.common.Booru
 import org.kodein.di.instance
 

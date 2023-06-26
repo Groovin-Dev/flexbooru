@@ -14,9 +14,9 @@
  */
 
 package onlymash.flexbooru.data.model.sankaku
-import kotlinx.serialization.Serializable
 
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 
 @Serializable

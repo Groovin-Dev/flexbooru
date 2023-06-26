@@ -51,10 +51,10 @@ import onlymash.flexbooru.databinding.ActivityCommentBinding
 import onlymash.flexbooru.extension.NetResult
 import onlymash.flexbooru.ui.adapter.CommentAdapter
 import onlymash.flexbooru.ui.adapter.StateAdapter
-import onlymash.flexbooru.ui.viewmodel.CommentViewModel
-import onlymash.flexbooru.ui.viewmodel.getCommentViewModel
 import onlymash.flexbooru.ui.base.KodeinActivity
 import onlymash.flexbooru.ui.viewbinding.viewBinding
+import onlymash.flexbooru.ui.viewmodel.CommentViewModel
+import onlymash.flexbooru.ui.viewmodel.getCommentViewModel
 import org.kodein.di.instance
 
 class CommentActivity : KodeinActivity() {

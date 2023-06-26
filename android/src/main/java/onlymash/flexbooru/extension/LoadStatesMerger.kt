@@ -1,19 +1,10 @@
 package onlymash.flexbooru.extension
 
-import androidx.paging.CombinedLoadStates
-import androidx.paging.LoadState
-import androidx.paging.LoadStates
+import androidx.paging.*
+import androidx.paging.LoadType.REFRESH
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.scan
-import androidx.paging.RemoteMediator
-import androidx.paging.PagingSource
-import androidx.paging.LoadType.REFRESH
-import androidx.paging.LoadType
-import onlymash.flexbooru.extension.MergedState.NOT_LOADING
-import onlymash.flexbooru.extension.MergedState.REMOTE_ERROR
-import onlymash.flexbooru.extension.MergedState.REMOTE_STARTED
-import onlymash.flexbooru.extension.MergedState.SOURCE_ERROR
-import onlymash.flexbooru.extension.MergedState.SOURCE_LOADING
+import onlymash.flexbooru.extension.MergedState.*
 
 
 //https://github.com/android/architecture-components-samples/blob/main/PagingWithNetworkSample/lib/src/main/java/com/android/example/paging/pagingwithnetwork/reddit/paging/LoadStatesMerger.kt

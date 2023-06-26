@@ -29,11 +29,11 @@ import onlymash.flexbooru.data.database.dao.HistoryDao
 import onlymash.flexbooru.data.database.dao.PostDao
 import onlymash.flexbooru.databinding.ActivityListCommonBinding
 import onlymash.flexbooru.ui.adapter.HistoryAdapter
+import onlymash.flexbooru.ui.base.KodeinActivity
 import onlymash.flexbooru.ui.helper.ItemTouchHelperCallback
+import onlymash.flexbooru.ui.viewbinding.viewBinding
 import onlymash.flexbooru.ui.viewmodel.HistoryViewModel
 import onlymash.flexbooru.ui.viewmodel.getHistoryViewModel
-import onlymash.flexbooru.ui.base.KodeinActivity
-import onlymash.flexbooru.ui.viewbinding.viewBinding
 import org.kodein.di.instance
 
 class HistoryActivity : KodeinActivity() {

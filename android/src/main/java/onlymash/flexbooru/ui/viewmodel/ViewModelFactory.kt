@@ -18,6 +18,8 @@ package onlymash.flexbooru.ui.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStoreOwner
+import onlymash.flexbooru.common.saucenao.api.SauceNaoApi
+import onlymash.flexbooru.common.tracemoe.api.TraceMoeApi
 import onlymash.flexbooru.data.database.dao.BooruDao
 import onlymash.flexbooru.data.database.dao.HistoryDao
 import onlymash.flexbooru.data.database.dao.MuzeiDao
@@ -30,8 +32,6 @@ import onlymash.flexbooru.data.repository.suggestion.SuggestionRepository
 import onlymash.flexbooru.data.repository.tag.TagRepository
 import onlymash.flexbooru.data.repository.tagfilter.TagFilterRepository
 import onlymash.flexbooru.extension.getViewModel
-import onlymash.flexbooru.common.saucenao.api.SauceNaoApi
-import onlymash.flexbooru.common.tracemoe.api.TraceMoeApi
 
 
 fun ViewModelStoreOwner.getBooruViewModel(booruDao: BooruDao): BooruViewModel =

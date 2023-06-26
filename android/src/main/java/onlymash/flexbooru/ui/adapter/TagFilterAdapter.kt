@@ -28,8 +28,8 @@ import onlymash.flexbooru.app.Values.BOORU_TYPE_GEL_LEGACY
 import onlymash.flexbooru.app.Values.BOORU_TYPE_UNKNOWN
 import onlymash.flexbooru.data.model.common.TagFilter
 import onlymash.flexbooru.databinding.ItemTagFilterSubheadBinding
-import onlymash.flexbooru.ui.viewbinding.viewBinding
 import onlymash.flexbooru.ui.base.BaseTagFilterViewHolder
+import onlymash.flexbooru.ui.viewbinding.viewBinding
 
 class TagFilterAdapter(private val deleteTagCallback: (TagFilter) -> Unit,
                        private val addSearchBarTextCallback: () -> Unit) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
